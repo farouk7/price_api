@@ -1,6 +1,5 @@
 package com.price.price_api;
 
-
 import com.price.price_api.dao.Price;
 import com.price.price_api.service.PriceService;
 import org.junit.jupiter.api.BeforeEach;
@@ -70,7 +69,6 @@ public class PriceControllerTest {
         Long brandId = 1L;
         Long productId = 35455L;
 
-        // Mock the service response
         Price mockPrice = new Price();
         when(priceService.findApplicablePrice(brandId, productId, date)).thenReturn(mockPrice);
 
@@ -83,6 +81,6 @@ public class PriceControllerTest {
                 .andReturn();
 
         // You can further assert the content or other properties of the response
-        System.out.println(testName + ": petición a las " + dateTimeStr + " del producto " + productId + " para la brand " + brandId + " (ZARA)");
+        System.out.println(testName + ": petición a las " + dateTimeStr + " del producto " + productId + " para la brand " + brandId );
     }
 }

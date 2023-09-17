@@ -11,7 +11,6 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/")
 public class PriceController {
     private final PriceService priceService;
 
@@ -26,7 +25,7 @@ public class PriceController {
         return priceService.findApplicablePrice(brandId, productId, date);
     }
     @GetMapping("/getPriceAll")
-    public List<Price> getPrice(){//@RequestParam Long brandId) {
+    public List<Price> getPrice(){
         return priceService.findAllBrand();
     }
 }
